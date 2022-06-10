@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bookers</title>
+  </head>
+
+
+<body>
+ <h1>Editing Book</h1>
+
+　<%= form_with model: @book, url: update_book_path(@book.id), method: :patch do |f| %>
+
+ <div class="field">
+  <div>Title</div>
+  <%= f.text_field :title %>
+  </div>
+
+ <div class="field">
+ <div>Body</div>
+  <%= f.text_area :body %>
+ </div>
+
+ <div class="actions">
+
+  <%= f.submit 'Update Book' %>
+ </div>
+
+ <%= link_to "Show", book_path(@book.id) %>
+ |
+ <%= link_to "Back", "/books" %>
+
+  <% end %>
+</body>
+
+

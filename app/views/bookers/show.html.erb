@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Bookers</title>
+  </head>
+
+  <body>
+
+　 <p class=success-message>
+   <%= flash[:notice] %>
+   </p>
+
+   <p>
+   <strong>Title:</strong>
+   <%= @book.title %>
+   </p>
+
+   <p>
+   <strong>Body:</strong>
+   <%= @book.body %>
+   </p>
+
+   <%= link_to "Edit", edit_book_path(@book.id) %>
+   |
+   <a class="back" href="/books">Back</a>
+
+
+  </body>
